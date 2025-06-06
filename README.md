@@ -22,7 +22,7 @@ Our submission is in two parts, including this public view as well as a stakehol
 
 | File | Description |
 |----------|----------|
-| [Audit Shield Human Readable (HTML)](auditshield/AuditShield_Dashboard.html)    |  Human Readable HTML KSI Report Exported from Command Center  |
+| [Audit Shield Human Readable (HTML)](https://html-preview.github.io/?url=https://github.com/InfusionPoints/fedramp20x-low-pilot-final/blob/master/auditshield/AuditShield_Dashboard.html)    |  Human Readable HTML KSI Report Exported from Command Center  |
 | [Audit Shield Machine Readable (JSON)](ksi_report_redacted.json)    |  Machine Readable JSON KSI Report Exported from Command Center  |
 | [Schema (JSON)](schema.json)    |  KSI Report Schema  |
 | [3PAO KSI Methods Letter](InfusionPoints-FedRAMP_20x_KSIs-Methods-Letter-05232025.pdf)  | 3PAO Letter attestesting to our validation methods |
