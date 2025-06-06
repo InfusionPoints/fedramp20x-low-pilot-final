@@ -1,0 +1,1325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Key Security Indicators</title>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #171717;
+      color: white;
+
+      display: flex;
+      flex-direction: column;
+      padding: 0.5rem;
+      gap: 0.5rem;
+    }
+
+    .page-title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+    }
+
+    .page-title .progress-bar-container {
+        max-width: unset;
+    }
+
+    .page-title .title {
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .ksi-metrics-container {
+        background-color: rgba(0, 0, 0, 0.35);
+        outline: 1px solid black;
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.25rem;
+        border-radius: 8px;
+        gap: 0.5rem;
+    }
+
+    .ksi-metrics-container .metric-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 6px;
+        padding: 0.5rem;
+        width: 15rem;
+        min-width: 130px;
+        height: 100%;
+    }
+
+    .ksi-metrics-container .metric-box .metric-title {
+        font-weight: 500;
+    }
+
+    .ksi-metrics-container .metric-box .metric-data {
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    .metric-data.green {
+        color: #388e3c;
+    }
+
+    .metric-data.yellow {
+        color: #f57c00;
+    }
+
+    .metric-data.red {
+        color: #d32f2f;
+    }
+
+    .ksi-metrics-container .metric-box .metric-subTitle {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .ksi-container {
+        background: rgba(0, 0, 0, 0.35);
+        outline: 1px solid black;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+    }
+
+    .ksi-group {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.5rem;
+    }
+
+    .ksi-group:last-of-type {
+        border-bottom: unset;
+    }
+
+    .ksi-group .title-row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ksi-group .title-row .title {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .ksi-group .title-row .title .group-name {
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+
+    .ksi-group .title-row .title .group-name span {
+        opacity: 0.5;
+    }
+
+    .ksi-metadata {
+        font-size: 0.75rem;
+        opacity: 0.5;
+        font-weight: 400;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+        white-space: nowrap;
+        min-width: 30dvw;
+        margin-left: auto;
+    }
+
+    .progress-bar-container {
+        --bar-height: 12px;
+        --outline-width: 2px;
+        flex-grow: 1;
+        max-width: 400px;
+        margin-left: auto;
+    }
+
+    .progress-bar-bg {
+        --color: rgba(0, 0, 0, 0.35);
+        background-color: var(--color);
+        outline: var(--outline-width) solid var(--color);
+        backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        border-radius: 100px;
+        position: relative;
+        min-height: var(--bar-height);
+    }
+
+    .progress-bar-filled {
+        background-image: linear-gradient(
+            -45deg,
+            rgba(0,0,0,0) 25%,
+            rgba(0,0,0,0.1) 25%,
+            rgba(0,0,0,0.1) 50%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 75%,
+            rgba(0,0,0,0.1) 75%,
+            rgba(0,0,0,0.1) 100%
+            );
+    }
+
+    .progress-bar-filled {
+        border-radius: 100px;
+        min-height: var(--bar-height);
+        
+        background-size: 28px 28px;
+        animation: move-bg-filled 2s linear infinite;
+        transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    }
+
+    @keyframes move-bg-filled {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 28px 28px;
+        }
+    }
+
+    .progress-bar-text {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% - 1px));
+
+        font-size: calc(var(--bar-height) - 1px);
+        line-height: calc(var(--bar-height) - 1px);
+    }
+
+    .progress-bar-text .pct-status {
+        font-weight: bolder;
+    }
+
+    .ksi-info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .data-row-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ksi-group .data-rows {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ksi-group .data-rows .row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        /* justify-content: space-between; */
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .ksi-group .data-rows .row .status {
+        display: flex;
+        flex-direction: row;
+        
+        align-items: center;
+        gap: 0.25rem;
+        padding: 2px 0.25rem;
+        border-radius: 4px;
+        min-width: 62px;
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .status .material-symbols-outlined {
+        opacity: 0.5;
+    }
+
+    .ksi-group .data-rows .row .status.red {
+        background-color: #d32f2f !important;
+    }
+
+    .ksi-group .data-rows .row .status.red p {
+        color: white !important;
+    }
+
+    .ksi-group .data-rows .row .status.yellow {
+        background-color: #f57c00 !important;
+    }
+
+    .ksi-group .data-rows .row .status.yellow p {
+        color: white !important;
+    }
+
+    .ksi-group .data-rows .row .status.green {
+        background-color: #388e3c !important;
+    }
+
+    .ksi-group .data-rows .row .status.green p {
+        color: white !important;
+    }
+
+    .ksi-group .data-rows .row .status p {
+        font-size: 0.8rem;
+    }
+
+    .ksi-group .data-rows .row .row-name span {
+        opacity: 0.5;
+        font-size: 0.70rem;
+    }
+
+    .ksi-group .data-rows .row:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .flip-arrow {
+        cursor: pointer;
+        transform: rotateX(0deg);
+        transition: transform 0.2s ease, opacity 0.2s ease;
+        opacity: 0.5;
+        user-select: none;
+    }
+
+    .flip-arrow:hover {
+        opacity: 1;
+    }
+
+    .ksi-info-container .data-row-container {
+        max-height: 500px;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .ksi-toggle-checkbox:checked ~ .ksi-info-container .data-row-container {
+        max-height: 0;
+    }
+
+    .ksi-toggle-checkbox:checked ~ .title-row .flip-arrow {
+        transform: scaleY(-1);
+    }
+
+    .flip-arrow {
+        transition: transform 0.2s ease;
+    }
+
+    .arrow-label {
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .ksi-toggle-checkbox {
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.7);
+        border: 3px solid transparent;
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2f859b;
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.7);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #B8DEEA;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .footer .dot-sep {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-size: 1rem;
+        opacity: 1;
+    }
+
+    .footer img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="page-title">
+        <p class="title">Key Security Indicators</p>
+    </div>
+
+    <div class="ksi-metrics-container">
+        <div class="metric-box">
+            <p class="metric-title">Total KSIs</p>
+            <p class="metric-data">10</p>
+            <p class="metric-subTitle">Key Security Indicators</p>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Validations</p>
+            <p class="metric-data">92</p>
+            <p class="metric-subTitle">Total Validations</p>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Success Rate</p>
+            <p class="metric-data green">100%</p>
+            <p class="metric-subTitle">Passed Validations</p>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Automation</p>
+            <p class="metric-data green">90%</p>
+            <p class="metric-subTitle">Automated Evidence</p>
+        </div>
+
+        <div class="metric-box">
+            <p class="metric-title">Live</p>
+            <p class="metric-data green">100%</p>
+            <p class="metric-subTitle">Live updating Evidence</p>
+        </div>
+    </div>
+
+    <div class="ksi-container">
+        <div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-CED"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-CED" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-CED</span> Cybersecurity Education <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CED.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CED.01</span> Ensure all employees receive security awareness training</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CED.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CED.02</span> Require role-specific training for high risk roles</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-PIY"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-PIY" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-PIY</span> Policy and Inventory <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.01</span> Have an up-to-date information resource inventory or code defining all deployed assets, software, and services</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.02</span> Have policies outlining the security objectives of all information resources</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.03</span> Maintain a vulnerability disclosure program</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.04</span> Build security considerations into the Software Development Lifecycle and align with CISA Secure By Design principles</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.05</span> Document methods used to evaluate information resource implementations</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.06.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.06</span> Have a dedicated staff and budget for security with executive support, commensurate with the size, complexity, scope, and risk of the service offering</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-PIY.07.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-PIY.07</span> Document risk management decisions for software supply chain security</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-INR"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-INR" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-INR</span> Incident Reporting <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-INR.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-INR.01</span> Identify all third-party information resources</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-INR.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-INR.02</span>  Regularly confirm that services handling federal information **or** are likely to impact the confidentiality, integrity, or availability of federal information are FedRAMP authorized and securely configured</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-INR.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-INR.03</span> Identify and prioritize mitigation of potential supply chain risks</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-IAM"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-IAM" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-IAM</span> Identity and Access Management <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-IAM.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-IAM.01</span> Enforce multi-factor authentication (MFA) using methods that are difficult to intercept or impersonate (phishing-resistant MFA) for all user authentication</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-IAM.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-IAM.02</span> Use secure passwordless methods for user authentication and authorization when feasible, otherwise enforce strong passwords with MFA</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-IAM.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-IAM.03</span> Enforce appropriately secure authentication methods for non-user accounts and services</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-IAM.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-IAM.04</span> Use a least-privileged, role and attribute-based, and just-in-time security authorization model for all user and non-user accounts and services</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-IAM.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-IAM.05</span> Implement zero trust design principles</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-SVC"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-SVC" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-SVC</span> Service Configuration <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.01</span> Harden and review network and system configurations</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.02</span>  Encrypt or otherwise secure network traffic</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.03</span>  Encrypt all federal and sensitive information at rest</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.04</span> Manage configuration centrally</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.05</span> Enforce system and information resource integrity through cryptographic means</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.06.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.06</span>  Use automated key management systems to manage, protect, and regularly rotate digital keys and certificates</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-SVC.07.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-SVC.07</span> Use a consistent, risk-informed approach for applying security patches</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-MLA"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-MLA" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-MLA</span> Monitoring, Logging, and Auditing <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.01</span> Operate a Security Information and Event Management (SIEM) or similar system(s) for centralized, tamper-resistent logging of events, activities, and changes</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.02</span> Regularly review and audit logs</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.03</span> Rapidly detect and remediate or mitigate vulnerabilities</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.04</span> Perform authenticated vulnerability scanning on publicly accessible components</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.05</span> Perform Infrastructure as Code (IaC) and configuration scanning</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-MLA.06.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-MLA.06</span> Centrally track and prioritize the remediation of identified vulnerabilities</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-CMT"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-CMT" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-CMT</span> Change Management <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CMT.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CMT.01</span> Log and monitor system modifications</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CMT.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CMT.02</span> Execute changes through redeployment of version controlled immutable resources rather than direct modification wherever possible</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CMT.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CMT.03</span> Implement automated testing and validation of changes prior to deployment</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CMT.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CMT.04</span> Have a documented change management procedure</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CMT.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CMT.05</span> Evaluate the risk and potential impact of any change</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-TPR"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-TPR" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-TPR</span> Third-Party Information Resources <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-TPR.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-TPR.01</span> Identify all third-party information resources</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-TPR.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-TPR.02</span>  Regularly confirm that services handling federal information **or** are likely to impact the confidentiality, integrity, or availability of federal information are FedRAMP authorized and securely configured</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-TPR.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-TPR.03</span> Identify and prioritize mitigation of potential supply chain risks</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-TPR.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-TPR.04</span> Monitor third party software information resources for upstream vulnerabilities, with contractual notification requirements or active monitoring services</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-RPL"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-RPL" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-RPL</span> Recovery Planning <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:53 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-RPL.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-RPL.01</span> Define Recovery Time Objectives (RTO) and Recovery Point Objectives (RPO)</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-RPL.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-RPL.02</span> Develop and maintain a recovery plan that aligns with the defined recovery objectives</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-RPL.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-RPL.03</span> Perform system backups aligned with the RTO and RPO</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-RPL.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-RPL.04</span> Test the capability to recover from incidents and contingencies</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+<div class="ksi-group">
+    <input
+        type="checkbox"
+        id="toggle-KSI-CNA"
+        class="ksi-toggle-checkbox"
+        hidden
+    />
+    <div class="title-row">
+        <div class="title">
+            <label for="toggle-KSI-CNA" class="arrow-label">
+                <span class="material-symbols-outlined flip-arrow">expand_more</span>
+            </label>
+            <p class="group-name"><span>KSI-CNA</span> Cloud Native Architecture <span class="ksi-metadata">• Last Ran: June 04, 2025 at 08:54 PM (UTC)</span></p>
+
+            <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="ksi-info-container">
+        <div class="data-row-container">
+            <div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.01.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.01</span> Configure ALL information resources to limit inbound and outbound traffic</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.02.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.02</span> Design systems to minimize the attack surface and minimize lateral movement if compromised</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.03.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.03</span> Use logical networking and related capabilities to enforce traffic flow controls</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.04.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.04</span> Use immutable infrastructure with strictly defined functionality and privileges by default</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.05.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.05</span> Have denial of service protection</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.06.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.06</span> Design systems for high availability and rapid recovery</p>
+        </div>
+    </a>
+</div><div class="data-rows">
+    <a style="color: white; text-decoration: none;" href="Groups/KSI-CNA.07.html">
+        <div class="row">
+            <div class="status green">
+                <span class="material-symbols-outlined" style="font-size: 18px;">check_circle</span>
+                <p>100%</p>
+            </div>
+            
+            <p class="row-name"><span>KSI-CNA.07</span> Use high availability design principles to maximize uptime</p>
+        </div>
+    </a>
+</div>
+        </div>
+    </div>
+</div>
+    </div>
+
+    <div class="footer">
+        <img src="favicon.png">
+        <p>Powered By InfusionPoints, LLC</p>
+        <p class="dot-sep">•</p>
+        <p>Exported on: Friday, June 06, 2025 at 05:49 PM (UTC)</p>
+        <p class="dot-sep">•</p>
+        <p>Exported By: chris.eaves</p>
+    </div>
+</body>
+</html>

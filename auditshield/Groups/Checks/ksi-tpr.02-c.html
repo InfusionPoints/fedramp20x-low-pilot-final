@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Key Security Indicators - KSI-TPR.02-C</title>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #171717;
+      color: white;
+
+      height: 100dvh;
+
+        --error-color: 	hsl(1, 77%, 55%);
+        --key-color: hsl(168, 56%, 59%);
+        --bracket-color: 	hsl(50, 100%, 50%);
+        --string-color: hsl(187, 49%, 70%);
+        --number-color: 	hsl(25, 90%, 72%);
+        --boolean-color: hsl(341, 83%, 63%);
+        --null-color: 	hsl(0, 0%, 46%);
+    }
+
+    body {
+        padding: 0.5rem;
+    }
+
+    .ksi-container {
+        background: rgba(0, 0, 0, 0.35);
+        outline: 1px solid black;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+        padding: 0.5rem;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-title-row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .card-title-row .name-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card-title-row .name {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .name.darken {
+        opacity: 0.5;
+    }
+
+    .name-breadcrumb {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .control-data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 1 1 0;
+        overflow-y: auto;
+    }
+
+    .data-container {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .summary-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .metric {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-title {
+        font-weight: 500;
+    }
+
+    .small {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .list {
+        max-height: 30dvh;
+        overflow-y: auto;
+    }
+
+    .data-evidence {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: 30rem;
+    }
+
+    .evidence-container {
+        overflow-y: auto;
+        display: flex;
+    }
+
+    .evidence-data {
+        font-size: 0.9rem;
+        white-space: pre-wrap;
+        width: 100%;
+    }
+
+    .back-btn {
+        opacity: 0.5;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+
+    .back-btn:hover {
+        opacity: 1;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.7);
+        border: 3px solid transparent;
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2f859b;
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.7);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #B8DEEA;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .footer .dot-sep {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-size: 1rem;
+        opacity: 1;
+    }
+
+    .footer img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="ksi-container">
+        <div class="card-title-row">
+            <div class="name-row">
+                <div class="name-breadcrumb">
+                    <span class="material-symbols-outlined back-btn"><a href="../KSI-TPR.02.html" style="color: white; text-decoration: none;">chevron_left</a></span>
+                    <p class="name darken">KSI-TPR.02</p>
+                    <p class="seperator">/</p>
+                    <p class="name">KSI-TPR.02-C</p>
+                </div>
+                
+            </div>
+            <p class="desc"></p>
+        </div>
+
+        <div class="control-data">
+            <div class="data-container">
+                <div class="summary-info">
+                    <div class="metric">
+                        <p class="small">Status</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Collection Method</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Criteria</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Source</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Validation Method</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Validation Timestamp</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-container">
+                <p class="container-title">Assets <span class="small">(1)</span></p>
+                <div class="list">
+                    REDACTED
+                </div>
+            </div>
+
+            REDACTED
+
+            <div class="data-container">
+                <p class="container-title">Lambda Information</p>
+                <div class="summary-info">
+                    <div class="metric">
+                        <p class="small">Code Hash SHA-256</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Function Name</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Function Version</p>
+                        <p class="metric-data">REDACTED</p>
+                    </div>
+                </div>
+            </div>
+
+            Evidence: REDACTED
+        </div>
+    </div>
+    <div class="footer">
+        <img src="../../favicon.png">
+        <p>Powered By InfusionPoints, LLC</p>
+        <p class="dot-sep">•</p>
+        <p>Exported on: Friday, June 06, 2025 at 05:49 PM (UTC)</p>
+        <p class="dot-sep">•</p>
+        <p>Exported By: chris.eaves</p>
+    </div>
+</body>
+</html>

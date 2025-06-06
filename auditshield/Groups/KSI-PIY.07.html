@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <title>Key Security Indicators - KSI-PIY.07</title>
+
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #171717;
+      color: white;
+
+      height: 100dvh;
+
+        --error-color: 	hsl(1, 77%, 55%);
+        --key-color: hsl(168, 56%, 59%);
+        --bracket-color: 	hsl(50, 100%, 50%);
+        --string-color: hsl(187, 49%, 70%);
+        --number-color: 	hsl(25, 90%, 72%);
+        --boolean-color: hsl(341, 83%, 63%);
+        --null-color: 	hsl(0, 0%, 46%);
+    }
+
+    body {
+        padding: 0.5rem;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;   
+    }
+
+    .ksi-container {
+        background: rgba(0, 0, 0, 0.35);
+        outline: 1px solid black;
+        border-radius: 8px;
+        backdrop-filter: blur(10px);
+        box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.35);
+        padding: 0.5rem;
+        height: 100%;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .progress-bar-container {
+        --bar-height: 12px;
+        --outline-width: 2px;
+        flex-grow: 1;
+        max-width: 400px;
+        margin-left: auto;
+    }
+
+    .progress-bar-bg {
+        --color: rgba(0, 0, 0, 0.35);
+        background-color: var(--color);
+        outline: var(--outline-width) solid var(--color);
+        backdrop-filter: blur(2px);
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+        border-radius: 100px;
+        position: relative;
+        min-height: var(--bar-height);
+    }
+
+    .progress-bar-filled {
+        background-image: linear-gradient(
+            -45deg,
+            rgba(0,0,0,0) 25%,
+            rgba(0,0,0,0.1) 25%,
+            rgba(0,0,0,0.1) 50%,
+            rgba(0,0,0,0) 50%,
+            rgba(0,0,0,0) 75%,
+            rgba(0,0,0,0.1) 75%,
+            rgba(0,0,0,0.1) 100%
+            );
+    }
+
+    .progress-bar-filled {
+        border-radius: 100px;
+        min-height: var(--bar-height);
+        
+        background-size: 28px 28px;
+        animation: move-bg-filled 2s linear infinite;
+        transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    }
+
+    @keyframes move-bg-filled {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: 28px 28px;
+        }
+    }
+
+    .progress-bar-text {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        align-items: center;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, calc(-50% - 1px));
+
+        font-size: calc(var(--bar-height) - 1px);
+        line-height: calc(var(--bar-height) - 1px);
+    }
+
+    .progress-bar-text .pct-status {
+        font-weight: bolder;
+    }
+
+    .card-title-row {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .card-title-row .name-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .card-title-row .name {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .name.darken {
+        opacity: 0.5;
+    }
+
+    .name-breadcrumb {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .control-data {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        flex: 1 1 0;
+        overflow-y: auto;
+    }
+
+    .data-container {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .summary-info {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+    }
+
+    .metric {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .container-title {
+        font-weight: 500;
+    }
+
+    .small {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .compliance-checks {
+        flex: 1 1 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .compliance-checks .title-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 0.5rem;
+    }
+
+    .compliance-checks .title-row p {
+        font-weight: 500;
+    }
+
+    .compliance-checks .title-row p span {
+        font-weight: 400;
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .compliance-checks .check-list {
+        flex: 1 1 0;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .check-item:nth-child(even)  {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .check-item {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 200px 200px 300px 200px 150px;
+        gap: 1rem;
+        cursor: pointer;
+        padding: 0.25rem;
+        border-radius: 6px;
+    }
+
+    .check-item:hover {
+        background-color: rgba(0, 0, 0, 0.25);
+    }
+
+    .non-compliant {
+        color: #d32f2f;
+    }
+
+    .compliant {
+        color: #388e3c;
+    }
+
+    .underline {
+        width: min-content;
+        white-space: nowrap;
+    }
+
+    .underline:hover {
+        text-decoration: underline; 
+    }
+
+    .left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .bot {
+        opacity: 0.5;
+    }
+
+    .back-btn {
+        opacity: 0.5;
+        cursor: pointer;
+        transition: opacity 0.2s ease;
+    }
+
+    .back-btn:hover {
+        opacity: 1;
+    }
+
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: rgba(0,0,0,0.7);
+        border: 3px solid transparent;
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #2f859b;
+        border-radius: 4px;
+        border: 1px solid rgba(0,0,0,0.7);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #B8DEEA;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .footer p {
+        font-size: 0.75rem;
+        opacity: 0.5;
+    }
+
+    .footer .dot-sep {
+        padding-left: 0.25rem;
+        padding-right: 0.25rem;
+        font-size: 1rem;
+        opacity: 1;
+    }
+
+    .footer img {
+        width: 20px;
+        height: 20px;
+        filter: brightness(0) invert(1);
+    }
+    
+  </style>
+</head>
+<body>
+    <div class="ksi-container">
+        <div class="card-title-row">
+            <div class="name-row">
+                <div class="name-breadcrumb">
+                    <span class="material-symbols-outlined back-btn"><a href="../AuditShield_Dashboard.html">chevron_left</a></span>
+                    <p class="name">KSI-PIY.07</p>
+                </div>
+                
+                <div class="progress-bar-container">
+                <div class="progress-bar-bg">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    </div>
+                    <div class="progress-bar-text">
+                        <p class="pct-status">100%</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <p class="desc">Document risk management decisions for software supply chain security</p>
+        </div>
+
+        <div class="control-data">
+            <div class="data-container">
+                <div class="summary-info">
+                    <div class="metric">
+                        <p class="small">Total Findings</p>
+                        <p class="metric-data">1 finding(s)</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Compliant Findings</p>
+                        <p class="metric-data">1 compliant finding(s) (100%)</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Non-Compliant Findings</p>
+                        <p class="metric-data">0 non-compliant finding(s) (0%)</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Automated Findings</p>
+                        <p class="metric-data">0 automated finding(s) (0%)</p>
+                    </div>
+
+                    <div class="metric">
+                        <p class="small">Live Findings</p>
+                        <p class="metric-data">1 live finding(s) (100%)</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="compliance-checks">
+                <div class="title-row">
+                    <p>Compliance Checks</p>
+                </div>
+                    <div class="check-list">
+                        <div class="check-item">
+    <div class="left">
+        <div class="placeholder" style="width: 18px; height: 18px;"></div>
+
+        <span class="material-symbols-outlined compliant" style="font-size: 18px;">check_circle</span>
+
+        <div class="metric" (click)="selectCheck(check)">
+            <p class="small">Check</p>
+            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-piy.07-a.html">ksi-piy.07-a</a></p>
+        </div>
+    </div>
+    
+    <div class="metric">
+        <p class="small">Collection Method</p>
+        <p class="metric-data">document</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Criteria</p>
+        <p class="metric-data">Is there a supply change management policy?</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Source</p>
+        <p class="metric-data">Command Center</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Validation Method</p>
+        <p class="metric-data">review</p>
+    </div>
+</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="footer">
+        <img src="../favicon.png">
+        <p>Powered By InfusionPoints, LLC</p>
+        <p class="dot-sep">•</p>
+        <p>Exported on: Friday, June 06, 2025 at 05:49 PM (UTC)</p>
+        <p class="dot-sep">•</p>
+        <p>Exported By: chris.eaves</p>
+    </div>
+</body>
+</html>

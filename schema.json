@@ -1,0 +1,42 @@
+{
+  "ksi_validation_summary": {
+    "total_validations": "<Integer: total number of nested validation checks>",
+    "pass_count":        "<Integer: number of nested checks with status true>",
+    "fail_count":        "<Integer: number of nested checks with status false>",
+    "pass_ratio":        "<Float: pass_count / total_validations>"
+  },
+  "ksi_validations": [
+    {
+      "id":                     "<String: unique KSI identifier>",
+      "description":            "<String: human‐readable description of this KSI>",
+      "validation_timestamp":   "<String: UTC timestamp (e.g. \"Sun Jun 01 2025 17:48:17 UTC\")>",
+      "ksi_lambda_information": {
+        "codehashsha256":     "<String: Base64‐encoded SHA-256 hash of Lambda code>",
+        "function_name":      "<String: exact Lambda function name>",
+        "function_version":   "<String: Lambda version or alias (e.g. \"$LATEST\")>"
+      },
+      "validations": [
+        {
+          "id":                   "<String: identifier for first-level validation (e.g. \"ksi-ced.01\")>",
+          "description":          "<String: description of this validation step>",
+          "ksi_validation_status":"<String: \"true\" | \"false\" | \"partial\" based on nested results>",
+          "nested_validations": [
+            {
+              "id":                    "<String: identifier for nested check (e.g. \"ksi-ced.01-a\")>",
+              "validation_timestamp":  "<String: RFC3339 UTC timestamp (e.g. \"2025-06-01T17:48:16Z\")>",
+              "criteria":              "<String: question or condition being evaluated>",
+			  "command(s)":            "<Array of Strings: CLI or API commands used to gather evidence>",
+			  "evidence":              "<String: JSON-stringified evidence array/object>",
+              "source":                "<String: origin of evidence (e.g. \"Command Center\")>",
+              "collection_method":     "<String: how evidence was collected (e.g. \"document\")>",
+              "ksi_validation_status": "<Boolean: true if this nested check passed, false otherwise>",
+              "assets":                "<String: \"<N> asset(s) audited\">",
+              "validation_method":     "<String: method used (e.g. \"review\" | \"automatic\")>",
+              "live_evidence":         "<Boolean: true if evidence was gathered in real time>"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
