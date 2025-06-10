@@ -24,8 +24,9 @@ Our submission is in two parts, including this public view as well as a stakehol
 |----------|----------|
 | [Audit Shield Human Readable (HTML)](https://html-preview.github.io/?url=https://github.com/InfusionPoints/fedramp20x-low-pilot-final/blob/master/auditshield/AuditShield_Dashboard.html)    |  Human Readable HTML KSI Report Exported from Command Center  |
 | [Audit Shield Machine Readable (JSON)](ksi_report_redacted.json)    |  Machine Readable JSON KSI Report Exported from Command Center  |
-| [Schema (JSON)](schema.json)    |  KSI Report Schema  |
-| [3PAO KSI Methods Letter](InfusionPoints-FedRAMP_20x_KSIs-Methods-Letter-05232025.pdf)  | 3PAO Letter attestesting to our validation methods |
+| [KSI Report Schema (JSON)](schema.json)    |  KSI Report Schema Data Definition  |
+
+The private side includes Human Readable and Machine Readable outputs with full evidence generated from the live Audit Shield view. For KSIs where a file was referenced, the file is provided in an evidence folder. 
 
 ## 3PAO Review and Assessment by Fortreum
 
