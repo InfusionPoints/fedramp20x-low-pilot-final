@@ -28,8 +28,27 @@ Our submission is in two parts, including this public view as well as a stakehol
 
 The private side includes Human Readable and Machine Readable outputs with full evidence generated from the live Audit Shield view. For KSIs where a file was referenced, the file is provided in an evidence folder. 
 
-## 3PAO Section
-[Fortreum to provide]
+## 3PAO Review and Assessment by Fortreum
+
+**Fortreum**, as the independent 3PAO for this engagement, has completed a comprehensive assessment of InfusionPoints Command Center. We validated the implementation of FedRAMP 20x Low requirements and Key Security Indicators (KSIs) through rigorous testing and evaluation.
+
+Our assessment confirmed that InfusionPoints Command Center meets the FedRAMP 20x Low baseline requirements, with particular emphasis on the automated evidence collection capabilities provided by AuditShield. We verified the accuracy and completeness of the KSI implementations and the continuous monitoring capabilities.
+
+### Assessment Documentation
+
+Our complete assessment findings are documented privately due to the sensitivity and proprietary nature of the customer solution. However, we have prepared high-level results and a public version of the assessment for transparency.
+
+Public assessment artifacts:
+- [Fortreum 3PAO Attestation Letter](3pao-fortreum/InfusionPoints-FedRAMP_20x_KSIs-FINAL-Leter-06092025.pdf)
+- [Public Assessment JSON](3pao-fortreum/infpts_command_center_assessment_public.json)
+
+### Assessment Overview
+![Assessment Overview](3pao-fortreum/infpt-assessment-overview.png)
+
+### Digital Signature Verification
+![Digital Signature Proof](3pao-fortreum/signed-json-proof.png)
+
+To ensure the integrity and authenticity of our assessment artifacts, Fortreum has implemented digital signing using PGP keys. All assessment results are provided in both human-readable and machine-readable formats with cryptographic signatures for verification purposes.
 
 ## Command Center and Audit Shield Tour
 ### Home
