@@ -340,10 +340,10 @@
                 
                 <div class="progress-bar-container">
                 <div class="progress-bar-bg">
-                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 100%;">
+                    <div class="progress-bar-filled" style="background-color: rgb(56, 142, 60); width: 75%;">
                     </div>
                     <div class="progress-bar-text">
-                        <p class="pct-status">100%</p>
+                        <p class="pct-status">75%</p>
                     </div>
                 </div>
             </div>
@@ -356,27 +356,27 @@
                 <div class="summary-info">
                     <div class="metric">
                         <p class="small">Total Findings</p>
-                        <p class="metric-data">3 finding(s)</p>
+                        <p class="metric-data">4 finding(s)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Compliant Findings</p>
-                        <p class="metric-data">3 compliant finding(s) (100%)</p>
+                        <p class="metric-data">3 compliant finding(s) (75%)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Non-Compliant Findings</p>
-                        <p class="metric-data">0 non-compliant finding(s) (0%)</p>
+                        <p class="metric-data">1 non-compliant finding(s) (25%)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Automated Findings</p>
-                        <p class="metric-data">3 automated finding(s) (100%)</p>
+                        <p class="metric-data">4 automated finding(s) (100%)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Live Findings</p>
-                        <p class="metric-data">3 live finding(s) (100%)</p>
+                        <p class="metric-data">4 live finding(s) (100%)</p>
                     </div>
                 </div>
             </div>
@@ -405,7 +405,7 @@
 
     <div class="metric">
         <p class="small">Criteria</p>
-        <p class="metric-data">Does SaaS leverage a centralized SEIM?</p>
+        <p class="metric-data">Does SaaS leverage a centralized SIEM?</p>
     </div>
 
     <div class="metric">
@@ -479,6 +479,37 @@
         <p class="small">Validation Method</p>
         <p class="metric-data">automatic</p>
     </div>
+</div><div class="check-item">
+    <div class="left">
+        <div class="placeholder" style="width: 18px; height: 18px;"></div>
+
+        <span class="material-symbols-outlined non-compliant" style="font-size: 18px;">cancel</span>
+
+        <div class="metric" (click)="selectCheck(check)">
+            <p class="small">Check</p>
+            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-mla.01-d.html">ksi-mla.01-d</a></p>
+        </div>
+    </div>
+    
+    <div class="metric">
+        <p class="small">Collection Method</p>
+        <p class="metric-data">api</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Criteria</p>
+        <p class="metric-data">Do log-* roles (e.g. log-secops, log-sre) avoid S3 write access?</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Source</p>
+        <p class="metric-data">AWS IAM</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Validation Method</p>
+        <p class="metric-data">automatic</p>
+    </div>
 </div>
                     </div>
                 </div>
@@ -488,7 +519,7 @@
         <img src="../favicon.png">
         <p>Powered By InfusionPoints, LLC</p>
         <p class="dot-sep">•</p>
-        <p>Exported on: Friday, June 06, 2025 at 05:49 PM (UTC)</p>
+        <p>Exported on: Thursday, July 03, 2025 at 08:06 PM (UTC)</p>
         <p class="dot-sep">•</p>
         <p>Exported By: chris.eaves</p>
     </div>

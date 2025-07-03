@@ -18,6 +18,11 @@ AuditShield provides CSPs, 3PAOs, and Agency stakeholders alike with a reports v
 AuditShield provides details concerning what commands are run to gather KSI artifacts and provide stakeholders with the ability to track a full chain of custody of an artifact to their source within the environment. AuditShield will have capabilities to reflect evidence mapped to additional frameworks over time. 
 
 ## Submission Details
+### Update July 3, 2025
+Per PMO review and feedback, our public and private submissions have been updated and submitted as of July 3, 2025. We have added five additional KSI checks. The private submission now includes an updated evidence dump, a Comment / Response tracking spreadsheet as well as a Command Center Agency Secure Configuration Guidance document. 
+
+### Original Submission June 18, 2025
+
 Our submission is in two parts, including this public view as well as a stakeholder-only view, currently shared with the FedRAMP PMO. This public view consists of:
 
 | File | Description |
@@ -26,7 +31,7 @@ Our submission is in two parts, including this public view as well as a stakehol
 | [Audit Shield Machine Readable (JSON)](ksi_report_redacted.json)    |  Machine Readable JSON KSI Report Exported from Command Center  |
 | [KSI Report Schema (JSON)](schema.json)    |  KSI Report Schema Data Definition  |
 
-The private side includes Human Readable and Machine Readable outputs with full evidence generated from the live Audit Shield view. For KSIs where a file was referenced, the file is provided in an evidence folder. 
+The private side includes Human Readable and Machine Readable outputs with full evidence generated from the live Audit Shield view. For KSIs where a file was referenced, the file is provided in an evidence folder.
 
 ## 3PAO Review and Assessment by Fortreum
 

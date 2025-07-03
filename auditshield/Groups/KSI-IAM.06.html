@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-  <title>Key Security Indicators - KSI-PIY.02</title>
+  <title>Key Security Indicators - KSI-IAM.06</title>
 
   <style>
     *, *::before, *::after {
@@ -335,7 +335,7 @@
             <div class="name-row">
                 <div class="name-breadcrumb">
                     <span class="material-symbols-outlined back-btn"><a href="../AuditShield_Dashboard.html">chevron_left</a></span>
-                    <p class="name">KSI-PIY.02</p>
+                    <p class="name">KSI-IAM.06</p>
                 </div>
                 
                 <div class="progress-bar-container">
@@ -348,7 +348,7 @@
                 </div>
             </div>
             </div>
-            <p class="desc">Have policies outlining the security objectives of all information resources</p>
+            <p class="desc">Automatically disable or otherwise secure accounts with privileged access in response to suspicious activity</p>
         </div>
 
         <div class="control-data">
@@ -356,12 +356,12 @@
                 <div class="summary-info">
                     <div class="metric">
                         <p class="small">Total Findings</p>
-                        <p class="metric-data">1 finding(s)</p>
+                        <p class="metric-data">3 finding(s)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Compliant Findings</p>
-                        <p class="metric-data">1 compliant finding(s) (100%)</p>
+                        <p class="metric-data">3 compliant finding(s) (100%)</p>
                     </div>
 
                     <div class="metric">
@@ -371,12 +371,12 @@
 
                     <div class="metric">
                         <p class="small">Automated Findings</p>
-                        <p class="metric-data">1 automated finding(s) (100%)</p>
+                        <p class="metric-data">3 automated finding(s) (100%)</p>
                     </div>
 
                     <div class="metric">
                         <p class="small">Live Findings</p>
-                        <p class="metric-data">1 live finding(s) (100%)</p>
+                        <p class="metric-data">3 live finding(s) (100%)</p>
                     </div>
                 </div>
             </div>
@@ -394,23 +394,85 @@
 
         <div class="metric" (click)="selectCheck(check)">
             <p class="small">Check</p>
-            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-piy.02-a.html">ksi-piy.02-a</a></p>
+            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-iam.06-a.html">ksi-iam.06-a</a></p>
         </div>
     </div>
     
     <div class="metric">
         <p class="small">Collection Method</p>
-        <p class="metric-data">document</p>
+        <p class="metric-data">api</p>
     </div>
 
     <div class="metric">
         <p class="small">Criteria</p>
-        <p class="metric-data">Are there security policy documents?</p>
+        <p class="metric-data">Are accounts automatically disabled after X unsuccessful login attempts?</p>
     </div>
 
     <div class="metric">
         <p class="small">Source</p>
-        <p class="metric-data">Command Center</p>
+        <p class="metric-data">Active Directory</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Validation Method</p>
+        <p class="metric-data">automatic</p>
+    </div>
+</div><div class="check-item">
+    <div class="left">
+        <div class="placeholder" style="width: 18px; height: 18px;"></div>
+
+        <span class="material-symbols-outlined compliant" style="font-size: 18px;">check_circle</span>
+
+        <div class="metric" (click)="selectCheck(check)">
+            <p class="small">Check</p>
+            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-iam.06-b.html">ksi-iam.06-b</a></p>
+        </div>
+    </div>
+    
+    <div class="metric">
+        <p class="small">Collection Method</p>
+        <p class="metric-data">api</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Criteria</p>
+        <p class="metric-data">Are GuardDuty detectors enabled?</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Source</p>
+        <p class="metric-data">AWS GuardDuty</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Validation Method</p>
+        <p class="metric-data">automatic</p>
+    </div>
+</div><div class="check-item">
+    <div class="left">
+        <div class="placeholder" style="width: 18px; height: 18px;"></div>
+
+        <span class="material-symbols-outlined compliant" style="font-size: 18px;">check_circle</span>
+
+        <div class="metric" (click)="selectCheck(check)">
+            <p class="small">Check</p>
+            <p class="underline"><a style="color: white; text-decoration: none;" href="Checks/ksi-iam.06-c.html">ksi-iam.06-c</a></p>
+        </div>
+    </div>
+    
+    <div class="metric">
+        <p class="small">Collection Method</p>
+        <p class="metric-data">api</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Criteria</p>
+        <p class="metric-data">Are users disabled after inactivity?</p>
+    </div>
+
+    <div class="metric">
+        <p class="small">Source</p>
+        <p class="metric-data">AWS EventBridge</p>
     </div>
 
     <div class="metric">

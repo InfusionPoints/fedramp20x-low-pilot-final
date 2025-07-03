@@ -3,8 +3,8 @@
     "cloud_Service_provider": "InfusionPoints, LLC ",
     "cloud_Service_offering": "Command Center Platform Management SaaS",
     "deployment_environment": "AWS GovCloud (US)",
-    "submission_date": "06-05-2025",
-    "contact_email": "gary.daemer@infusionpoints.com",
+    "submission_date": "07-03-2025",
+    "contact_email": "fedramp20x@infusionpoints.com",
     "submission_version": "1.0"
   },
   "submission_summary": {
@@ -17,24 +17,24 @@
     },
     "3pao_summary": {
       "organization_name": "Fortreum",
-      "review_date": "06-05-2025",
+      "review_date": "07-03-2025",
       "assessment_summary": "3PAO reviewed the Key Security Indicator validations, evidence, and continuous monitoring, confirming alignment with FedRAMP Low 20x Phase One pilot expectations.",
       "assessment_comment": "Best thing since sliced bread"
     }
   },
   "ksi_validation_summary": {
-    "total_validations": 92,
-    "pass_count": 92,
-    "fail_count": 0,
-    "pass_ratio": 1.0
+    "total_validations": 97,
+    "pass_count": 96,
+    "fail_count": 1,
+    "pass_ratio": 99
   },
   "ksi_validations": [
     {
       "id": "KSI-CED",
       "description": "Cybersecurity Education",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:07 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "edW0JqRcrJkVXXerXXCSY3te3chAlBET3HWMRRSfYAY=",
+        "codehashsha256": "XFE7GqK454rtlkiBxe8jz12lMELNATHzPEideK96Pgk=",
         "function_name": "xccel-cc-shld-m-KSI-CED",
         "function_version": "$LATEST"
       },
@@ -46,12 +46,12 @@
           "nested_validations": [
             {
               "id": "ksi-ced.01-a",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:31Z",
               "criteria": "Do all employees receive security awareness training?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -64,56 +64,56 @@
           "nested_validations": [
             {
               "id": "ksi-ced.02-a",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:40Z",
               "criteria": "Do all employees receive role based access training?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-ced.02-b",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:42Z",
               "criteria": "Do all employees receive incident response training?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-ced.02-c",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
-              "criteria": "Do all employees receive insider threat security awareness training?",
+              "validation_timestamp": "2025-07-01T17:34:45Z",
+              "criteria": "Do all employees receive insider threat security awareness training??",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-ced.02-d",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:49Z",
               "criteria": "Do all employees receive secure software development training?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-ced.02-e",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:51Z",
               "criteria": "Do all employees receive social engineering security awareness training?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -124,9 +124,9 @@
     {
       "id": "KSI-CMT",
       "description": "A secure cloud service provider will ensure that all system changes are properly documented and configuration baselines are updated accordingly.",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:16 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "cqxu+g7TDoFYUY88HxkGEgirdVHp/PVsWHNr+/dwGPY=",
+        "codehashsha256": "S/qWLITev/8vdqImJB6N67zXWKv1NHaBeEGZGYrptDg=",
         "function_name": "xccel-cc-shld-m-KSI-CMT",
         "function_version": "$LATEST"
       },
@@ -138,7 +138,7 @@
           "nested_validations": [
             {
               "id": "ksi-cmt.01-a",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:29Z",
               "criteria": "Are CloudTrail logs being monitored to track system modifications?",
               "source": "Graylog",
               "collection_method": "api",
@@ -149,8 +149,8 @@
             },
             {
               "id": "ksi-cmt.01-b",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
-              "criteria": "Is AWS Security Hub enabled implemented across the environment?",
+              "validation_timestamp": "2025-07-01T17:34:31Z",
+              "criteria": "Is AWS Security Hub enabled across the environment?",
               "source": "AWS Security Hub",
               "collection_method": "api",
               "ksi_validation_status": true,
@@ -160,7 +160,7 @@
             },
             {
               "id": "ksi-cmt.01-c",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
+              "validation_timestamp": "2025-07-01T17:34:39Z",
               "criteria": "Are AWS Config rules deployed in every account?",
               "source": "AWS Config",
               "collection_method": "api",
@@ -173,13 +173,13 @@
         },
         {
           "id": "ksi-cmt.02",
-          "description": "Execute changes through redeployment of version controlled immutable resources rather than direct modification wherever possible",
+          "description": "Execute changes through redeployment of version-controlled immutable resources rather than direct modification wherever possible",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-cmt.02-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Are change management actions/efforts tracked and documented?",
+              "validation_timestamp": "2025-07-01T17:34:45Z",
+              "criteria": "Are there change management tickets?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -189,12 +189,12 @@
             },
             {
               "id": "ksi-cmt.02-b",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
+              "validation_timestamp": "2025-07-01T17:34:46Z",
               "criteria": "Does SAAS utilize immutable container images?",
               "source": "AWS ECR",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "47 asset(s) audited",
+              "assets": "51 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -207,8 +207,8 @@
           "nested_validations": [
             {
               "id": "ksi-cmt.03-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
-              "criteria": "Is an automated application testing report (SSP - Add New Organization) present in S3?",
+              "validation_timestamp": "2025-07-01T17:34:48Z",
+              "criteria": "Is an automated application testing report (SSP - Add New Organization) present in document repository?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -225,7 +225,7 @@
           "nested_validations": [
             {
               "id": "ksi-cmt.04-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
+              "validation_timestamp": "2025-07-01T17:34:49Z",
               "criteria": "Is a documented configuration management procedure in place?",
               "source": "Command Center",
               "collection_method": "document",
@@ -243,7 +243,7 @@
           "nested_validations": [
             {
               "id": "ksi-cmt.05-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
+              "validation_timestamp": "2025-07-01T17:34:51Z",
               "criteria": "Is a Security Impact Analysis (SIA) conducted to assess the risk and potential impact of proposed changes?",
               "source": "Command Center",
               "collection_method": "document",
@@ -259,9 +259,9 @@
     {
       "id": "KSI-CNA",
       "description": "A secure cloud service offering will use cloud native architecture and design principles to enforce and enhance the Confidentiality, Integrity and Availability of the system.",
-      "validation_timestamp": "Wed Jun 04 2025 20:54:41 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 18:33:23 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "ko/bDm2sicBQQZ+sS/5waab/Ns1itqV+Nn4YbG+4wwQ=",
+        "codehashsha256": "hTlXuo5DW6TOzHqCoOZHm6MIiqVwEldrodi+2Id1xgs=",
         "function_name": "xccel-cc-shld-m-KSI-CNA",
         "function_version": "$LATEST"
       },
@@ -273,18 +273,18 @@
           "nested_validations": [
             {
               "id": "ksi-cna.01-a",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:11Z",
               "criteria": "Do WAFs contain rule rate limiting traffic?",
               "source": "AWS WAF",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "6 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.01-b",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:16Z",
               "criteria": "Are network ACLs in use across accounts?",
               "source": "AWS VPC",
               "collection_method": "api",
@@ -295,12 +295,12 @@
             },
             {
               "id": "ksi-cna.01-c",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:32Z",
               "criteria": "Is a proxy deployed within the environment?",
               "source": "AWS EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "15 asset(s) audited",
+              "assets": "1 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -313,34 +313,34 @@
           "nested_validations": [
             {
               "id": "ksi-cna.02-a",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:37Z",
               "criteria": "Are security groups in place within the environment?",
               "source": "AWS EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "48 asset(s) audited",
+              "assets": "44 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.02-b",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:51Z",
               "criteria": "Do IAM roles and associated policies exist in all accounts?",
               "source": "AWS IAM",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "407 asset(s) audited",
+              "assets": "366 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.02-c",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:34:58Z",
               "criteria": "Is GuardDuty enabled in all AWS accounts?",
               "source": "Amazon GuardDuty",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "6 asset(s) audited",
+              "assets": "5 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -353,18 +353,18 @@
           "nested_validations": [
             {
               "id": "ksi-cna.03-a",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:01Z",
               "criteria": "Are security groups in place within the environment?",
               "source": "AWS EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "48 asset(s) audited",
+              "assets": "44 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.03-b",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:02Z",
               "criteria": "Are transit gateways in place with route tables configured?",
               "source": "AWS VPC",
               "collection_method": "api",
@@ -375,7 +375,7 @@
             },
             {
               "id": "ksi-cna.03-c",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:04Z",
               "criteria": "Are network ACLs in use across accounts?",
               "source": "AWS VPC",
               "collection_method": "api",
@@ -393,7 +393,7 @@
           "nested_validations": [
             {
               "id": "ksi-cna.04-a",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:05Z",
               "criteria": "Are containers immutable?",
               "source": "AWS ECS",
               "collection_method": "api",
@@ -404,10 +404,10 @@
             },
             {
               "id": "ksi-cna.04-b",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:07Z",
               "criteria": "Does the Active Directory group audit return populated results for groups and members?",
-              "source": "AWS EC2",
-              "collection_method": "ssm",
+              "source": "AWS SSM",
+              "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -422,34 +422,34 @@
           "nested_validations": [
             {
               "id": "ksi-cna.05-a",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:08Z",
               "criteria": "Do WAFs contain rule rate limiting traffic?",
               "source": "AWS WAF",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "6 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.05-b",
-              "validation_timestamp": "2025-06-04T20:54:29Z",
+              "validation_timestamp": "2025-07-01T18:35:09Z",
               "criteria": "Is GuardDuty enabled in all AWS accounts?",
               "source": "Amazon GuardDuty",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "6 asset(s) audited",
+              "assets": "5 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.05-c",
-              "validation_timestamp": "2025-06-04T20:54:41Z",
+              "validation_timestamp": "2025-07-01T18:35:10Z",
               "criteria": "Are Network ACLs and Security Groups in place to enforce traffic control?",
               "source": "Amazon EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "61 asset(s) audited",
+              "assets": "57 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -462,34 +462,23 @@
           "nested_validations": [
             {
               "id": "ksi-cna.06-a",
-              "validation_timestamp": "2025-06-04T20:54:41Z",
+              "validation_timestamp": "2025-07-01T18:35:11Z",
               "criteria": "Is the system deployed across multiple Availability Zones and multiple AWS regions?",
-              "source": "AWS Organizations",
+              "source": "AWS EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "10 asset(s) audited",
+              "assets": "12 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-cna.06-b",
-              "validation_timestamp": "2025-06-04T20:54:41Z",
-              "criteria": "Are Elastic Load Balancers deployed for high availability?",
-              "source": "AWS EC2",
+              "validation_timestamp": "2025-07-01T18:35:13Z",
+              "criteria": "Is the system fronted by at least one load balancer to support HA and distribution?",
+              "source": "AWS ELB",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "3 asset(s) audited",
-              "validation_method": "automatic",
-              "live_evidence": true
-            },
-            {
-              "id": "ksi-cna.06-c",
-              "validation_timestamp": "2025-06-04T20:54:41Z",
-              "criteria": "Are recent snapshots present in the account for data recovery?",
-              "source": "AWS EC2",
-              "collection_method": "api",
-              "ksi_validation_status": true,
-              "assets": "42 asset(s) audited",
+              "assets": "7 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -502,13 +491,13 @@
           "nested_validations": [
             {
               "id": "ksi-cna.07-a",
-              "validation_timestamp": "2025-06-04T20:54:41Z",
+              "validation_timestamp": "2025-07-01T18:35:14Z",
               "criteria": "Is there documented guidance showing implementation of cloud-native services based on provider best practices?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -518,9 +507,9 @@
     {
       "id": "KSI-IAM",
       "description": "Identity and Access Management",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:14 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "QLOqngq3tPrezmmo9qTpRnTFTlvcvFSQG3xHJu/aWYo=",
+        "codehashsha256": "lITPF2fd8Gzxx0bvbwun/Hf+eXIxd5Ds5olMnFEjf/E=",
         "function_name": "xccel-cc-shld-m-KSI-IAM",
         "function_version": "$LATEST"
       },
@@ -532,9 +521,9 @@
           "nested_validations": [
             {
               "id": "ksi-iam.01-a",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:30Z",
               "criteria": "Is phishing resistant MFA implemented and enforced across all AWS WorkSpaces?",
-              "source": "AWS Workspaces",
+              "source": "AWS workspaces",
               "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
@@ -543,9 +532,9 @@
             },
             {
               "id": "ksi-iam.01-b",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:42Z",
               "criteria": "Does SaaS implement and enforce MFA?",
-              "source": "AWS Cognito",
+              "source": "AWS cognito",
               "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
@@ -561,21 +550,21 @@
           "nested_validations": [
             {
               "id": "ksi-iam.02-a",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
-              "criteria": "Passwordless methods in place?",
-              "source": "AWS IAM",
+              "validation_timestamp": "2025-07-01T17:34:43Z",
+              "criteria": "Does SaaS enforce phishing resistent MFA?",
+              "source": "xccel-cc-shld-m-RSA-MFA",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-iam.02-b",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:54Z",
               "criteria": "GPO Password policies in place?",
-              "source": "Active Directory",
-              "collection_method": "api",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -583,10 +572,10 @@
             },
             {
               "id": "ksi-iam.02-c",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
-              "criteria": "Enforce strong passwords?",
-              "source": "Active Directory",
-              "collection_method": "api",
+              "validation_timestamp": "2025-07-01T17:34:56Z",
+              "criteria": "Are strong passwords enforced?",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -601,10 +590,10 @@
           "nested_validations": [
             {
               "id": "ksi-iam.03-a",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
-              "criteria": "API Auth Methods present?",
-              "source": "AWS IAM",
-              "collection_method": "api",
+              "validation_timestamp": "2025-07-01T17:34:57Z",
+              "criteria": "Are API Auth Methods present?",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -612,7 +601,7 @@
             },
             {
               "id": "ksi-iam.03-b",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:59Z",
               "criteria": "Does API Gateway have any authorizers configured?",
               "source": "AWS API Gateway",
               "collection_method": "api",
@@ -623,12 +612,12 @@
             },
             {
               "id": "ksi-iam.03-c",
-              "validation_timestamp": "2025-06-04T20:53:08Z",
+              "validation_timestamp": "2025-07-01T17:35:01Z",
               "criteria": "Does SAAS ALB and APIGW have a WAF assigned?",
-              "source": "AWS IAM",
+              "source": "AWS WAF",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "2 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -641,7 +630,7 @@
           "nested_validations": [
             {
               "id": "ksi-iam.04-a",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:59Z",
               "criteria": "A Does SaaS leverage short lived JWTs (ID token or access token) and verify on API Gateway with Authorizer?",
               "source": "AWS API Gateway",
               "collection_method": "api",
@@ -652,9 +641,9 @@
             },
             {
               "id": "ksi-iam.04-b",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
-              "criteria": "Does SaaS leverage least-privilege roles ",
-              "source": "Active Directory",
+              "validation_timestamp": "2025-07-01T17:35:02Z",
+              "criteria": "Does SaaS implement and enforce MFA?",
+              "source": "AWS cognito",
               "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
@@ -663,9 +652,9 @@
             },
             {
               "id": "ksi-iam.04-c",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
-              "criteria": "Does SaaS leverage role-based access control (RBAC)?",
-              "source": "Active Directory",
+              "validation_timestamp": "2025-07-01T17:35:02Z",
+              "criteria": "Does SaaS leverage least-privilege roles?",
+              "source": "AWS cognito",
               "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
@@ -676,18 +665,58 @@
         },
         {
           "id": "ksi-iam.05",
-          "description": "Implement zero trust design principles",
+          "description": "Apply zero trust design principles",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-iam.05-a",
-              "validation_timestamp": "2025-06-04T20:53:14Z",
-              "criteria": "IAM key rotation and RSA enforcement defined",
+              "validation_timestamp": "2025-07-01T17:35:04Z",
+              "criteria": "Is IAM key rotation and RSA enforcement defined?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
+              "live_evidence": true
+            }
+          ]
+        },
+        {
+          "id": "ksi-iam.06",
+          "description": "Automatically disable or otherwise secure accounts with privileged access in response to suspicious activity",
+          "ksi_validation_status": "true",
+          "nested_validations": [
+            {
+              "id": "ksi-iam.06-a",
+              "validation_timestamp": "2025-07-01T17:35:54Z",
+              "criteria": "Are accounts automatically disabled after X unsuccessful login attempts?",
+              "source": "Active Directory",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "1 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-iam.06-b",
+              "validation_timestamp": "2025-07-01T17:35:55Z",
+              "criteria": "Are GuardDuty detectors enabled?",
+              "source": "AWS GuardDuty",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "2 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-iam.06-c",
+              "validation_timestamp": "2025-07-01T17:35:57Z",
+              "criteria": "Are users disabled after inactivity?",
+              "source": "AWS EventBridge",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "1 asset(s) audited",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -696,23 +725,23 @@
     },
     {
       "id": "KSI-INR",
-      "description": "Third Party Information Resources",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:11 UTC",
+      "description": "Incident Reporting",
+      "validation_timestamp": "Tue Jul 01 2025 18:48:32 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "m6M9/v9hZw8L+rQXxAXUWNxAaVJG9rV/4HQvj7etbyI=",
+        "codehashsha256": "MRnR6wLsXTWPRsxNW1rHU0X5N+fcCAphGY8E0xH09t8=",
         "function_name": "xccel-cc-shld-m-KSI-INR",
         "function_version": "$LATEST"
       },
       "validations": [
         {
           "id": "ksi-inr.01",
-          "description": "Identify all third-party information resources",
+          "description": " Report incidents according to FedRAMP requirements and cloud service provider policies",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-inr.01-a",
-              "validation_timestamp": "2025-06-04T20:53:11Z",
-              "criteria": "Does SaaS have an SBOM?",
+              "validation_timestamp": "2025-07-01T18:48:33Z",
+              "criteria": "Does SaaS report incidents?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -724,15 +753,15 @@
         },
         {
           "id": "ksi-inr.02",
-          "description": " Regularly confirm that services handling federal information **or** are likely to impact the confidentiality, integrity, or availability of federal information are FedRAMP authorized and securely configured",
+          "description": "Maintain a log of incidents and periodically review past incidents for patterns or vulnerabilities",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-inr.02-a",
-              "validation_timestamp": "2025-06-04T20:53:04Z",
-              "criteria": "SaaS has config rule for Federal data tagging?",
-              "source": "AWS Config",
-              "collection_method": "api",
+              "validation_timestamp": "2025-07-01T18:48:34Z",
+              "criteria": "Does SaaS do risk analysis?",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -740,10 +769,10 @@
             },
             {
               "id": "ksi-inr.02-b",
-              "validation_timestamp": "2025-06-04T20:53:04Z",
-              "criteria": "SaaS has a list of all aws services that are fedramp authorized?",
-              "source": "AWS Organizations",
-              "collection_method": "api",
+              "validation_timestamp": "2025-07-01T18:48:35Z",
+              "criteria": "Does SaaS monitor incidents?",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -751,23 +780,12 @@
             },
             {
               "id": "ksi-inr.02-c",
-              "validation_timestamp": "2025-06-04T20:53:11Z",
-              "criteria": "Does SaaS perform CIS/STIG Bench Marks? ",
-              "source": "AWS Security Hub",
-              "collection_method": "api",
+              "validation_timestamp": "2025-07-01T18:48:36Z",
+              "criteria": "Does SaaS resolve high severity vulnverabilities?",
+              "source": "Command Center",
+              "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "automatic",
-              "live_evidence": true
-            },
-            {
-              "id": "ksi-inr.02-d",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
-              "criteria": "Are automated assessments performed on SaaS?",
-              "source": "AWS Inspector2",
-              "collection_method": "api",
-              "ksi_validation_status": true,
-              "assets": "11 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -775,13 +793,13 @@
         },
         {
           "id": "ksi-inr.03",
-          "description": "Identify and prioritize mitigation of potential supply chain risks",
+          "description": "Generate after action reports and regularly incorporate lessons learned into operations",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-inr.03-a",
-              "validation_timestamp": "2025-06-04T20:53:11Z",
-              "criteria": "Does SaaS perform risk assesments?",
+              "validation_timestamp": "2025-07-01T18:48:37Z",
+              "criteria": "Does SaaS learn from incidents?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -796,9 +814,9 @@
     {
       "id": "KSI-MLA",
       "description": "A secure cloud service offering will monitor, log, and audit all important events, activity, and changes.",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:15 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 18:29:47 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "YMBgWwIGPX8R9cYIh9K7VbNSTMvGuie9/KEJYrfF4Mo=",
+        "codehashsha256": "ncxQACxc2QBOmBxw7Oirwv6olzb1WSGL71Wkt9RlwGc=",
         "function_name": "xccel-cc-shld-m-KSI-MLA",
         "function_version": "$LATEST"
       },
@@ -806,12 +824,12 @@
         {
           "id": "ksi-mla.01",
           "description": "Operate a Security Information and Event Management (SIEM) or similar system(s) for centralized, tamper-resistent logging of events, activities, and changes",
-          "ksi_validation_status": "true",
+          "ksi_validation_status": "partial",
           "nested_validations": [
             {
               "id": "ksi-mla.01-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Does SaaS leverage a centralized SEIM?",
+              "validation_timestamp": "2025-07-01T18:29:49Z",
+              "criteria": "Does SaaS leverage a centralized SIEM?",
               "source": "Graylog",
               "collection_method": "api",
               "ksi_validation_status": true,
@@ -821,7 +839,7 @@
             },
             {
               "id": "ksi-mla.01-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:29:54Z",
               "criteria": "Is S3 deletion of .gz files prevented via SCP?",
               "source": "AWS Organizations",
               "collection_method": "api",
@@ -832,12 +850,23 @@
             },
             {
               "id": "ksi-mla.01-c",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:29:56Z",
               "criteria": "Are changes logged and retrievable from centralized SIEM?",
               "source": "Graylog",
               "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-mla.01-d",
+              "validation_timestamp": "2025-07-01T18:29:59Z",
+              "criteria": "Do log-* roles (e.g. log-secops, log-sre) avoid S3 write access?",
+              "source": "AWS IAM",
+              "collection_method": "api",
+              "ksi_validation_status": false,
+              "assets": "77 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -850,24 +879,24 @@
           "nested_validations": [
             {
               "id": "ksi-mla.02-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:02Z",
               "criteria": "Are logs and event data being actively pulled into a SIEM?",
               "source": "Graylog",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "15 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-mla.02-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Does documentation reference 24X7X365 monitoring?",
+              "validation_timestamp": "2025-07-01T18:30:04Z",
+              "criteria": "Is there documented evidence of 24x7x365 log monitoring?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -879,7 +908,7 @@
           "nested_validations": [
             {
               "id": "ksi-mla.03-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:06Z",
               "criteria": "Are vulnerability automation efforts being logged?",
               "source": "Graylog",
               "collection_method": "api",
@@ -890,25 +919,25 @@
             },
             {
               "id": "ksi-mla.03-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Are vulnerability management detection/remediation/mitigation efforts being tracked?",
+              "validation_timestamp": "2025-07-01T18:30:08Z",
+              "criteria": "Are POAM efforts ticketd and/or documented?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
         },
         {
           "id": "ksi-mla.04",
-          "description": "Perform authenticated vulnerability scanning on publicly accessible components",
+          "description": "Perform authenticated vulnerability scanning on information resources",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-mla.04-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:09Z",
               "criteria": "Are vulnerability scans being tracked and logged?",
               "source": "Graylog",
               "collection_method": "api",
@@ -919,8 +948,8 @@
             },
             {
               "id": "ksi-mla.04-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Are vulnerabilty scanning tools deployed and utilized within the environment?",
+              "validation_timestamp": "2025-07-01T18:30:13Z",
+              "criteria": "Are vulnerability scanning tools deployed and utilized within the environment?",
               "source": "AWS EC2",
               "collection_method": "api",
               "ksi_validation_status": true,
@@ -930,12 +959,12 @@
             },
             {
               "id": "ksi-mla.04-c",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:24Z",
               "criteria": "Are container image scans enabled and running in ECR?",
               "source": "AWS ECR",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "3 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -943,13 +972,13 @@
         },
         {
           "id": "ksi-mla.05",
-          "description": "Perform Infrastructure as Code (IaC) and configuration scanning",
+          "description": "Perform Infrastructure as Code and configuration evaluation and testing",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-mla.05-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Is the SonarQube scan report present in S3?",
+              "validation_timestamp": "2025-07-01T18:30:30Z",
+              "criteria": "Is there a recent static code analysis report from SonarQube present?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -959,12 +988,12 @@
             },
             {
               "id": "ksi-mla.05-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Is the live environment configuration being automatically compared to a known good desired state?",
+              "validation_timestamp": "2025-07-01T18:30:32Z",
+              "criteria": "Is an application testing report (unit/integration) available in the document repository?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
-              "assets": "0 asset(s) audited",
+              "assets": "1 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -972,12 +1001,12 @@
         },
         {
           "id": "ksi-mla.06",
-          "description": "Centrally track and prioritize the remediation of identified vulnerabilities",
+          "description": "Centrally track and prioritize the mitigation and/or remediation of identified vulnerabilities",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-mla.06-a",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:34Z",
               "criteria": "Are continuous monitoring efforts and actions being ticketed?",
               "source": "Command Center",
               "collection_method": "document",
@@ -988,8 +1017,8 @@
             },
             {
               "id": "ksi-mla.06-b",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
-              "criteria": "Does the deviation request ticket file exist in S3?",
+              "validation_timestamp": "2025-07-01T18:30:35Z",
+              "criteria": "Does SaaS track deviation requests?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -999,7 +1028,7 @@
             },
             {
               "id": "ksi-mla.06-c",
-              "validation_timestamp": "2025-06-04T20:53:15Z",
+              "validation_timestamp": "2025-07-01T18:30:36Z",
               "criteria": "Is the Command Center ConMon dashboard being utilized for continuous monitoring?",
               "source": "Command Center",
               "collection_method": "api",
@@ -1014,10 +1043,10 @@
     },
     {
       "id": "KSI-PIY",
-      "description": "Policy and Inventory",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:09 UTC",
+      "description": "A secure cloud service offering will have intentional, organized, universal guidance for how every information resource, including personnel, is secured.",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "GAKyOEVBM/nQEwIPtjv2oN7hkl7SDi1ZsqhdvY4AObU=",
+        "codehashsha256": "wg5Gtp/3kbRIgdsPBfZq65Hy/hYWPg0jS2FDWnZWGgI=",
         "function_name": "xccel-cc-shld-m-KSI-PIY",
         "function_version": "$LATEST"
       },
@@ -1029,18 +1058,18 @@
           "nested_validations": [
             {
               "id": "ksi-piy.01-a",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:29Z",
               "criteria": "Is AWS Config enabled in every account?",
               "source": "AWS Config",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "5 asset(s) audited",
+              "assets": "6 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-piy.01-b",
-              "validation_timestamp": "2025-06-04T20:53:06Z",
+              "validation_timestamp": "2025-07-01T17:34:39Z",
               "criteria": "Is there an IaC repo for the environment?",
               "source": "AWS CodeCommit",
               "collection_method": "api",
@@ -1058,13 +1087,13 @@
           "nested_validations": [
             {
               "id": "ksi-piy.02-a",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:40Z",
               "criteria": "Are there security policy documents?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -1076,10 +1105,10 @@
           "nested_validations": [
             {
               "id": "ksi-piy.03-a",
-              "validation_timestamp": "2025-06-04T20:53:08Z",
+              "validation_timestamp": "2025-07-01T17:34:41Z",
               "criteria": "Is there a vulnerability disclosure program?",
               "source": "Command Center",
-              "collection_method": "document",
+              "collection_method": "api",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
               "validation_method": "automatic",
@@ -1094,13 +1123,13 @@
           "nested_validations": [
             {
               "id": "ksi-piy.04-a",
-              "validation_timestamp": "2025-06-04T20:53:08Z",
+              "validation_timestamp": "2025-07-01T17:34:42Z",
               "criteria": "Are security considerations documented?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -1112,7 +1141,7 @@
           "nested_validations": [
             {
               "id": "ksi-piy.05-a",
-              "validation_timestamp": "2025-06-04T20:53:08Z",
+              "validation_timestamp": "2025-07-01T17:34:43Z",
               "criteria": "Are IaC deployments validated?",
               "source": "Command Center",
               "collection_method": "document",
@@ -1130,13 +1159,13 @@
           "nested_validations": [
             {
               "id": "ksi-piy.06-a",
-              "validation_timestamp": true,
+              "validation_timestamp": "2025-07-01T17:34:43Z",
               "criteria": "Is there a letter of commitment?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -1148,13 +1177,13 @@
           "nested_validations": [
             {
               "id": "ksi-piy.07-a",
-              "validation_timestamp": "2025-06-04T20:53:09Z",
+              "validation_timestamp": "2025-07-01T17:34:44Z",
               "criteria": "Is there a supply change management policy?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "review",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
@@ -1164,9 +1193,9 @@
     {
       "id": "KSI-RPL",
       "description": "A secure cloud service offering will maintain, test, and execute effective Incident Response Plans for routine incidents such as vulnerability discovery, abnormal activity detection, and exfiltration of data.",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:20 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "jnjOrTbqTUAnu8iytODKZoavSLg8Sj721G3WbBa2z5A=",
+        "codehashsha256": "S9jXpTEOid5i3Ks7WdeLqDRc0XLT//+D5bSWa/Iex5A=",
         "function_name": "xccel-cc-shld-m-KSI-RPL",
         "function_version": "$LATEST"
       },
@@ -1178,7 +1207,7 @@
           "nested_validations": [
             {
               "id": "ksi-rpl.01-a",
-              "validation_timestamp": "2025-06-04T20:53:09Z",
+              "validation_timestamp": "2025-07-01T17:34:32Z",
               "criteria": "Are there RTO and RPO standards?",
               "source": "Command Center",
               "collection_method": "document",
@@ -1196,7 +1225,7 @@
           "nested_validations": [
             {
               "id": "ksi-rpl.02-a",
-              "validation_timestamp": "2025-06-04T20:53:11Z",
+              "validation_timestamp": "2025-07-01T17:34:36Z",
               "criteria": "Is there a disaster recovery plan in place?",
               "source": "Command Center",
               "collection_method": "document",
@@ -1214,23 +1243,23 @@
           "nested_validations": [
             {
               "id": "ksi-rpl.03-a",
-              "validation_timestamp": "2025-06-04T20:53:20Z",
-              "criteria": "Is point in time recovery status enabled?",
-              "source": "AWS DynamoDB",
-              "collection_method": "AWS Config",
+              "validation_timestamp": "2025-07-01T17:34:47Z",
+              "criteria": "Are data lifecycle policies in place?",
+              "source": "Command Center",
+              "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "130 asset(s) audited",
+              "assets": "6 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-rpl.03-b",
-              "validation_timestamp": "2025-06-04T20:53:19Z",
+              "validation_timestamp": "2025-07-01T17:34:51Z",
               "criteria": "Are data lifecycle policies in place?",
-              "source": "AWS DLM",
-              "collection_method": "boto",
+              "source": "AWS Config",
+              "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "6 asset(s) audited",
+              "assets": "134 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1243,7 +1272,7 @@
           "nested_validations": [
             {
               "id": "ksi-rpl.04-a",
-              "validation_timestamp": "2025-06-04T20:53:11Z",
+              "validation_timestamp": "2025-07-01T17:34:54Z",
               "criteria": "Are there Incident Response tickets?",
               "source": "Command Center",
               "collection_method": "document",
@@ -1258,10 +1287,10 @@
     },
     {
       "id": "KSI-SVC",
-      "description": "Service Configuration",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:14 UTC",
+      "description": "A secure cloud service offering will follow FedRAMP encryption policies, continuously verify information resource integrity, and restrict access to third-party information resources.",
+      "validation_timestamp": "Tue Jul 01 2025 19:12:51 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "jTUQq7S5kVgpQwDu1csBpo/gTnoQqiFxZkQd6O/PHfM=",
+        "codehashsha256": "ITBnSulcrN7JI2UNkrD+wRM2g2CSSaP9R05YZefVz4k=",
         "function_name": "xccel-cc-shld-m-KSI-SVC",
         "function_version": "$LATEST"
       },
@@ -1273,12 +1302,12 @@
           "nested_validations": [
             {
               "id": "ksi-svc.01-a",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
+              "validation_timestamp": "2025-07-01T19:12:52Z",
               "criteria": "Does SaaS leverage WAF?",
               "source": "AWS WAF",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "4 asset(s) audited",
+              "assets": "6 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1286,12 +1315,12 @@
         },
         {
           "id": "ksi-svc.02",
-          "description": " Encrypt or otherwise secure network traffic",
+          "description": "Encrypt or otherwise secure network traffic",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-svc.02-a",
-              "validation_timestamp": "2025-06-04T20:53:04Z",
+              "validation_timestamp": "2025-07-01T19:12:56Z",
               "criteria": "Is Fargate FIPS mode enabled in ECS account settings for all accounts?",
               "source": "AWS ECS",
               "collection_method": "api",
@@ -1304,17 +1333,50 @@
         },
         {
           "id": "ksi-svc.03",
-          "description": " Encrypt all federal and sensitive information at rest",
+          "description": "Encrypt all federal and sensitive information at rest",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-svc.03-a",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
+              "validation_timestamp": "2025-07-01T19:12:56Z",
               "criteria": "Do all S3 buckets have server-side encryption by default?",
               "source": "AWS S3",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "24 asset(s) audited",
+              "assets": "26 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-svc.03-b",
+              "validation_timestamp": "2025-07-01T19:13:02Z",
+              "criteria": "Are all EBS volumes encrypted?",
+              "source": "AWS EC2",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "26 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-svc.03-c",
+              "validation_timestamp": "2025-07-01T19:13:09Z",
+              "criteria": "Are all DynamoDB tables encrypted?",
+              "source": "AWS DynamoDB",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "130 asset(s) audited",
+              "validation_method": "automatic",
+              "live_evidence": true
+            },
+            {
+              "id": "ksi-svc.03-d",
+              "validation_timestamp": "2025-07-01T19:13:14Z",
+              "criteria": "Are all RDS PostgreSQL instances encrypted at rest with KMS?",
+              "source": "AWS RDS",
+              "collection_method": "api",
+              "ksi_validation_status": true,
+              "assets": "1 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1327,7 +1389,7 @@
           "nested_validations": [
             {
               "id": "ksi-svc.04-a",
-              "validation_timestamp": "2025-06-04T20:53:04Z",
+              "validation_timestamp": "2025-07-01T19:13:17Z",
               "criteria": "Does CodeCommit repository \"XccelerATOr\" exist in the control account?",
               "source": "AWS CodeCommit",
               "collection_method": "api",
@@ -1345,12 +1407,12 @@
           "nested_validations": [
             {
               "id": "ksi-svc.05-a",
-              "validation_timestamp": "2025-06-04T20:53:13Z",
+              "validation_timestamp": "2025-07-01T19:12:56Z",
               "criteria": "Do all S3 buckets have server-side encryption by default?",
               "source": "AWS S3",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "24 asset(s) audited",
+              "assets": "26 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1358,17 +1420,17 @@
         },
         {
           "id": "ksi-svc.06",
-          "description": " Use automated key management systems to manage, protect, and regularly rotate digital keys and certificates",
+          "description": "Use automated key management systems to manage, protect, and regularly rotate digital keys and certificates",
           "ksi_validation_status": "true",
           "nested_validations": [
             {
               "id": "ksi-svc.06-a",
-              "validation_timestamp": "2025-06-04T20:53:14Z",
+              "validation_timestamp": "2025-07-01T19:13:18Z",
               "criteria": "Does SaaS leverage AWS KMS built-in Key rotation",
               "source": "AWS KMS",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "51 asset(s) audited",
+              "assets": "66 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1381,12 +1443,12 @@
           "nested_validations": [
             {
               "id": "ksi-svc.07-a",
-              "validation_timestamp": "2025-06-04T20:53:14Z",
+              "validation_timestamp": "2025-07-01T19:13:23Z",
               "criteria": "Does SaaS leverage AWS Systems Manager Patch Manager patch baselines",
               "source": "AWS Systems Manager",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "90 asset(s) audited",
+              "assets": "109 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1397,9 +1459,9 @@
     {
       "id": "KSI-TPR",
       "description": "Third Party Information Resources",
-      "validation_timestamp": "Wed Jun 04 2025 20:53:17 UTC",
+      "validation_timestamp": "Tue Jul 01 2025 17:34:28 UTC",
       "ksi_lambda_information": {
-        "codehashsha256": "BynVCcR1+YYl+zP5b9BUQNmsrgZQ9DJa13jCLLnWCw0=",
+        "codehashsha256": "aDmJJKMIQuBRt16oNWWiky0hjgYf+zGxVajkvlYtWC8=",
         "function_name": "xccel-cc-shld-m-KSI-TPR",
         "function_version": "$LATEST"
       },
@@ -1411,7 +1473,7 @@
           "nested_validations": [
             {
               "id": "ksi-tpr.01-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
+              "validation_timestamp": "2025-07-01T17:34:30Z",
               "criteria": "Does SaaS have an SBOM?",
               "source": "Command Center",
               "collection_method": "document",
@@ -1429,18 +1491,18 @@
           "nested_validations": [
             {
               "id": "ksi-tpr.02-a",
-              "validation_timestamp": "2025-06-04T20:53:07Z",
+              "validation_timestamp": "2025-07-01T17:34:33Z",
               "criteria": "SaaS has config rule for Federal data tagging?",
               "source": "AWS Config",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "107 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-tpr.02-b",
-              "validation_timestamp": "2025-06-04T20:53:08Z",
+              "validation_timestamp": "2025-07-01T17:34:38Z",
               "criteria": "SaaS has a list of all aws services that are fedramp authorized?",
               "source": "AWS Organizations",
               "collection_method": "api",
@@ -1451,23 +1513,23 @@
             },
             {
               "id": "ksi-tpr.02-c",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
-              "criteria": "Does SaaS perform CIS/STIG Bench Marks? ",
+              "validation_timestamp": "2025-07-01T17:34:47Z",
+              "criteria": "Does SaaS perform CIS/STIG benchmarks?",
               "source": "AWS Security Hub",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "1 asset(s) audited",
+              "assets": "3 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             },
             {
               "id": "ksi-tpr.02-d",
-              "validation_timestamp": "2025-06-04T20:53:10Z",
+              "validation_timestamp": "2025-07-01T17:34:50Z",
               "criteria": "Are automated assessments performed on SaaS?",
               "source": "AWS Inspector2",
               "collection_method": "api",
               "ksi_validation_status": true,
-              "assets": "11 asset(s) audited",
+              "assets": "14 asset(s) audited",
               "validation_method": "automatic",
               "live_evidence": true
             }
@@ -1480,8 +1542,8 @@
           "nested_validations": [
             {
               "id": "ksi-tpr.03-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
-              "criteria": "Does SaaS perform risk assesments?",
+              "validation_timestamp": "2025-07-01T17:34:52Z",
+              "criteria": "Does SaaS perform risk assessments?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
@@ -1498,13 +1560,13 @@
           "nested_validations": [
             {
               "id": "ksi-tpr.04-a",
-              "validation_timestamp": "2025-06-04T20:53:16Z",
+              "validation_timestamp": "2025-07-01T17:34:55Z",
               "criteria": "Does SaaS monitor third party software?",
               "source": "Command Center",
               "collection_method": "document",
               "ksi_validation_status": true,
               "assets": "1 asset(s) audited",
-              "validation_method": "",
+              "validation_method": "automatic",
               "live_evidence": true
             }
           ]
