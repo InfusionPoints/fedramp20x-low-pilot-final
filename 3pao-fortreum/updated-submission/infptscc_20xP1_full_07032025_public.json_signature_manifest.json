@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "signed_file": {
+    "filename": "infptscc_20xP1_full_07032025_public.json",
+    "sha256": "9ad4292fb9388dc8392f10e4454cc04bb70c4a80eda5b89799c58542ea13a8e1",
+    "size": 11085,
+    "signed_at": "2025-07-03T17:07:13.874409"
+  },
+  "signature": {
+    "filename": "infptscc_20xP1_full_07032025_public.json.sig",
+    "type": "PGP_DETACHED"
+  },
+  "signer": {
+    "key_id": "2151608F3B82EC11",
+    "fingerprint": "C673C71C33521B3053B53BCF2151608F3B82EC11",
+    "uid": "Ethan Troy (FedRAMP 20x Assessment Signing) <etroy@fortreum.com>",
+    "algorithm": "1",
+    "key_length": "2048"
+  },
+  "assessment_metadata": {
+    "tool": "Fortreum FedRAMP 20x Assessment Tool",
+    "purpose": "Third-Party Assessment Organization (3PAO) FedRAMP 20x Compliance Assessment",
+    "file_type": "Public Redacted Version"
+  }
+}

@@ -48,12 +48,16 @@ Public assessment artifacts:
 - [Public Assessment JSON](3pao-fortreum/infpts_command_center_assessment_public.json)
 
 ### Assessment Overview
-![Assessment Overview](3pao-fortreum/infpt-assessment-overview.png)
+![Assessment Overview](3pao-fortreum/initial-submission/infpt-assessment-overview.png)
 
 ### Digital Signature Verification
-![Digital Signature Proof](3pao-fortreum/signed-json-proof.png)
+![Digital Signature Proof](3pao-fortreum/initial-submission/signed-json-proof.png)
 
 To ensure the integrity and authenticity of our assessment artifacts, Fortreum has implemented digital signing using PGP keys. All assessment results are provided in both human-readable and machine-readable formats with cryptographic signatures for verification purposes.
+
+### Updated Submission
+
+Fortreum has reviewed updated evidence and comments from FedRAMP that have been addressed in the public and private submissions of this package. The updated assessment artifacts are available in the [updated-submission](3pao-fortreum/updated-submission/) directory.
 
 ## Command Center and Audit Shield Tour
 ### Home
