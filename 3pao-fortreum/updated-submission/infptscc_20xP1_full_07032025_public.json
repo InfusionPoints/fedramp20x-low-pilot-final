@@ -1,0 +1,364 @@
+{
+  "fedramp20x_public_assessment": {
+    "version": "1.0",
+    "export_date": "2025-07-03T17:07:13.608200",
+    "system_name": "Command Center",
+    "assessment_type": "Initial Assessment",
+    "assessment_period": {
+      "start": "2025-05-20",
+      "end": "2025-06-06"
+    },
+    "overall_compliance": {
+      "total_ksis": 10,
+      "ksis_met": 10,
+      "ksis_not_met": 0,
+      "compliance_percentage": 100
+    },
+    "ksi_validation_status": [
+      {
+        "ksi_id": "KSI-CNA",
+        "ksi_name": "Cloud Native Architecture",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-CNA-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-04",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-05",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-06",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CNA-07",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-SVC",
+        "ksi_name": "Service Configuration",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-SVC-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-04",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-05",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-06",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-SVC-07",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-IAM",
+        "ksi_name": "Identity and Access Management",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-IAM-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-IAM-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-IAM-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-IAM-04",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-IAM-05",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-IAM-06",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-MLA",
+        "ksi_name": "Monitoring, Logging, and Auditing",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-MLA-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-MLA-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-MLA-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-MLA-04",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-MLA-05",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-MLA-06",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-CMT",
+        "ksi_name": "Change Management",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-CMT-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CMT-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CMT-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CMT-04",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-CMT-05",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-PIY",
+        "ksi_name": "Policy and Inventory",
+        "overall_status": "TRUE",
+        "automation_status": "Partially Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-PIY-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-02",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-04",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-05",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-06",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-PIY-07",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-TPR",
+        "ksi_name": "Third-Party Information Resources",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-TPR-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-TPR-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-TPR-03",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-TPR-04",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-CED",
+        "ksi_name": "Cybersecurity Education",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-CED-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-CED-02",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-RPL",
+        "ksi_name": "Recovery Planning",
+        "overall_status": "TRUE",
+        "automation_status": "Fully Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-RPL-01",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-RPL-02",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-RPL-03",
+            "validation_status": "TRUE",
+            "automation_status": "Fully Automated"
+          },
+          {
+            "requirement_id": "KSI-RPL-04",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      },
+      {
+        "ksi_id": "KSI-INR",
+        "ksi_name": "Incident Reporting",
+        "overall_status": "TRUE",
+        "automation_status": "Partially Automated",
+        "requirements": [
+          {
+            "requirement_id": "KSI-INR-01",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-INR-02",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          },
+          {
+            "requirement_id": "KSI-INR-03",
+            "validation_status": "TRUE",
+            "automation_status": "Partially Automated"
+          }
+        ]
+      }
+    ],
+    "mas_validation": {
+      "scope_properly_defined": true,
+      "rules_summary": {
+        "core_rules": 5,
+        "total_core_rules": 5,
+        "application_guidance": 5,
+        "total_application_guidance": 5
+      }
+    }
+  }
+}
